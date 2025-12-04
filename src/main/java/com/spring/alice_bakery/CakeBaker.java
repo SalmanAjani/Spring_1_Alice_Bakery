@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class CakeBaker {
 
-    final Frosting frosting;
-    final Syrup syrup;
+    private final Frosting frosting;
+    private final Syrup syrup;
 
     public CakeBaker(@Qualifier("strawberryFrosting") Frosting frosting, @Qualifier("chocolateSyrup") Syrup syrup) {
         this.frosting = frosting;

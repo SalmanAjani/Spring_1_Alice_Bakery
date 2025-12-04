@@ -11,7 +11,7 @@ public class AliceBakeryApplication implements CommandLineRunner {
     // @Autowired
     // No need for Autowired because this class has only one constructor, so Spring auto performs DI.
     // It is called 'Implicit Constructor Injection'.
-    final CakeBaker cakeBaker;
+    private final CakeBaker cakeBaker;
 
     public AliceBakeryApplication(CakeBaker cakeBaker) {
         this.cakeBaker = cakeBaker; // Constructor DI
