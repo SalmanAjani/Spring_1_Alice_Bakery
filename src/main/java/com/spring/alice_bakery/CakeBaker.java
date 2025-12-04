@@ -1,0 +1,23 @@
+package com.spring.alice_bakery;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class CakeBaker {
+
+    final Frosting frosting;
+    final Syrup syrup;
+
+    public CakeBaker(@Qualifier("strawberryFrosting") Frosting frosting, @Qualifier("chocolateSyrup") Syrup syrup) {
+        this.frosting = frosting;
+        this.syrup = syrup;
+    }
+
+    public void bakeCake(){
+        System.out.println("Baking Start");
+        syrup.getSyrup();
+        frosting.getFrosting();
+        System.out.println("Baking end");
+    }
+}
